@@ -1,11 +1,14 @@
-import numpy
-
 def hyperfact(num):
     numbers, numPlus, i = [], num + 1, 0
     while i < num:
         numPlus = numPlus - 1
         numbers.append(pow(numPlus, numPlus))
         i += 1
-        
-    answer = numpy.prod(numbers) % 1000000007
-    return answer
+    print(numbers)
+    answer = 1
+    
+    for num in numbers:
+        answer *= num
+    print(answer)
+    
+    return 
