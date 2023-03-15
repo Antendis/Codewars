@@ -1,12 +1,10 @@
+import numpy
+
 def hyperfact(num):
-    i = 0
-    numbers = []
-    numPlus = num + 1
+    numbers, numPlus, i = [], num + 1, 0
     while i < num:
         numPlus = numPlus - 1
-        numbers.append(numPlus)
+        numbers.append(pow(numPlus, numPlus))
         i += 1
         
-    print(numbers)
-    
-hyperfact(5)
+    return numpy.prod(numbers)
