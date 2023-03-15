@@ -7,4 +7,4 @@ def hyperfact(num):
         numbers.append(pow(numPlus, numPlus))
         i += 1
         
-    return numpy.prod(numbers)
+    return (numpy.prod(numbers) % 1000000007)
